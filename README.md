@@ -171,10 +171,14 @@ Result: LLM only fires for ~30-40% of tokens. The rest are served from RPI at ne
 | Platform | Backend | Special | Status |
 |----------|---------|---------|--------|
 | **POWER8** | VSX `vec_perm` | 128-byte cache lines, `mftb` entropy | Production |
-| **PowerPC G4** | AltiVec `vperm` | 32-byte cache lines | Production |
-| **x86_64** | Generic C (SSE planned) | `rdtsc` entropy | Production |
-| **AArch64** | Generic C (NEON planned) | `cntvct_el0` entropy | Production |
-| **N64 (MIPS R4300i)** | Scalar C | Zero FPU, 4MB RAM, xorshift32 PRNG | Production |
+| **PowerPC G4/G5** | AltiVec `vperm` | 32-byte cache lines | Production |
+| **x86_64** | Generic C (SSE/AVX planned) | `rdtsc` entropy | Production |
+| **x86 vintage (386+)** | Generic C | Any x86 with integer ALU | Production |
+| **AArch64** | Generic C (NEON `tbl` planned) | `cntvct_el0` entropy | Production |
+| **ARM 32-bit** | Generic C | ARMv6+, Raspberry Pi | Production |
+| **MIPS** | Scalar C | N64 R4300i, zero FPU, 4MB RAM | Production |
+| **RISC-V** | Generic C | RV32/RV64, any variant | Planned |
+| **SPARC** | Generic C | UltraSPARC and up | Planned |
 | **N64 RSP** | Vector microcode | 8x16-bit SIMD lanes | Planned |
 
 ### N64 Engine

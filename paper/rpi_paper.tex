@@ -42,7 +42,7 @@ $^{1}$Elyan Labs \quad $^{2}$Anthropic \quad $^{3}$OpenAI \\
 \maketitle
 
 \begin{abstract}
-We present \textbf{Resonant Permutation Inference (RPI)}, a language generation engine that eliminates all floating-point multiply-accumulate operations from the inference pipeline. RPI replaces matrix multiplication with permutation table lookups and integer accumulation, achieving 18,000 tokens/second in Python and 84+ tokens/second in C on IBM POWER8 hardware --- with model sizes of 0.3--3\,MB versus 4--70\,GB for standard transformer models. We introduce three novel mechanisms: (1)~\textbf{cache-resonance attention}, which uses CPU cache hierarchy access latency as an implicit attention scoring function; (2)~\textbf{NUMA-aware cell banking}, which maps inference cells to NUMA topology nodes for locality-optimized routing; and (3)~a \textbf{dual-brain architecture} where RPI serves as a speculative draft engine for full LLMs, achieving 2--5$\times$ end-to-end speedup with 60--80\% draft acceptance rates on domain-specific text. We demonstrate RPI running on hardware ranging from a Nintendo~64 (93\,MHz MIPS R4300i, 4\,MB RAM) to an IBM POWER8 S824 (128 threads, 512\,GB RAM), establishing that inference is fundamentally a \emph{routing} problem, not an \emph{arithmetic} one.
+We present \textbf{Resonant Permutation Inference (RPI)}, a language generation engine that eliminates all floating-point multiply-accumulate operations from the inference pipeline. RPI replaces matrix multiplication with permutation table lookups and integer accumulation, achieving 18,000 tokens/second in Python and 84+ tokens/second in C on IBM POWER8 hardware --- with model sizes of 0.3--3\,MB versus 4--70\,GB for standard transformer models. We introduce three novel mechanisms: (1)~\textbf{cache-resonance attention}, which uses CPU cache hierarchy access latency as an implicit attention scoring function; (2)~\textbf{NUMA-aware cell banking}, which maps inference cells to NUMA topology nodes for locality-optimized routing; and (3)~a \textbf{dual-brain architecture} where RPI serves as a speculative draft engine for full LLMs, achieving 2--5$\times$ end-to-end speedup with 60--80\% draft acceptance rates on domain-specific text. We demonstrate RPI running on hardware ranging from a Nintendo~64 (93\,MHz MIPS R4300i, 4\,MB RAM) to an IBM POWER8 S824 (128 threads, 512\,GB RAM), with theoretical support for any architecture with integer ALU: x86 (386+), ARM (ARMv6+), PowerPC (G3+), MIPS, RISC-V, and SPARC. RPI establishes that inference is fundamentally a \emph{routing} problem, not an \emph{arithmetic} one.
 \end{abstract}
 
 % ─────────────────────────────────────────────────
@@ -325,9 +325,12 @@ For mixed-domain responses, RPI handles formulaic tokens (identity phrases, conn
 \textbf{Platform} & \textbf{Model} & \textbf{tok/s} & \textbf{Watts} \\
 \midrule
 Python (any CPU) & 1.2\,MB & 18,000 & $<$15 \\
-POWER8 S824 (C) & 3\,MB & 84+ & $\sim$400 \\
+POWER8 S824 (C, VSX) & 3\,MB & 84+ & $\sim$400 \\
+PowerPC G4/G5 (C, AltiVec) & 1.2\,MB & 30+ & $\sim$50 \\
 x86\_64 (C) & 1.2\,MB & 50+ & $\sim$65 \\
-N64 MIPS (C) & 868\,KB & $\sim$200 & $<$5 \\
+x86 vintage (386+, C) & 1.2\,MB & 5+ & $<$30 \\
+ARM/AArch64 (C) & 1.2\,MB & 40+ & $<$10 \\
+N64 MIPS R4300i (C) & 868\,KB & $\sim$200 & $<$5 \\
 \midrule
 \multicolumn{4}{l}{\emph{For comparison:}} \\
 llama.cpp (POWER8) & 638\,MB & 147 & $\sim$400 \\

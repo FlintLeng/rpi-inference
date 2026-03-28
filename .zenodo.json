@@ -1,6 +1,6 @@
 {
   "title": "RPI: Resonant Permutation Inference - Zero-Multiply Language Generation via Cache-Resonant Permutation Routing",
-  "description": "RPI is a language generation engine that eliminates all floating-point multiply-accumulate operations from inference. It replaces matrix multiplication with permutation table lookups and integer accumulation, achieving 18,000 tokens/second with model sizes of 0.3-3 MB. Introduces cache-resonance attention (using CPU cache hierarchy as implicit attention), NUMA-aware cell banking, and a dual-brain architecture for speculative LLM drafting. Runs on hardware from Nintendo 64 (1996) to IBM POWER8.",
+  "description": "RPI is a language generation engine that eliminates all floating-point multiply-accumulate operations from inference. It replaces matrix multiplication with permutation table lookups and integer accumulation, achieving 18,000 tokens/second with model sizes of 0.3-3 MB. Introduces cache-resonance attention (using CPU cache hierarchy as implicit attention), NUMA-aware cell banking, and a dual-brain architecture for speculative LLM drafting. Runs on any architecture with a CPU cache hierarchy: ARM (NEON tbl), x86/x86_64 (SSE/AVX), PowerPC G4 (AltiVec vperm), PowerPC G5, IBM POWER8 (VSX vec_perm), MIPS (N64 R4300i), AArch64, RISC-V, SPARC, and vintage x86 (386+). Theoretically any CPU that can do table lookup and integer add/subtract.",
   "creators": [
     {
       "name": "Boudreaux, Scott",
@@ -32,7 +32,16 @@
     "speculative decoding",
     "language model",
     "POWER8",
+    "PowerPC",
+    "AltiVec",
     "N64",
+    "MIPS",
+    "ARM",
+    "NEON",
+    "x86",
+    "RISC-V",
+    "SPARC",
+    "vintage computing",
     "vec_perm",
     "non-bijunctive"
   ],
