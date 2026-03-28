@@ -1,5 +1,7 @@
 # RPI - Resonant Permutation Inference
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19271983.svg)](https://doi.org/10.5281/zenodo.19271983)
+
 **Zero-multiply inference engine. Table-driven. Cache-resonant. Hardware-timed.**
 
 RPI replaces matrix multiplication with permutation table lookups and integer accumulation. No floating point. No GEMM. Just `vec_perm` + add/subtract. Runs on everything from an N64 to POWER8 to x86.
@@ -301,8 +303,9 @@ RPI represents the extreme end of the efficiency spectrum: what if we remove ALL
 ```bibtex
 @software{rpi_inference_2026,
   title  = {RPI: Resonant Permutation Inference},
-  author = {Elyan Labs (Claude Opus + GPT-5.4 collaboration)},
+  author = {Boudreaux, Scott and Claude Opus and GPT-5.4},
   year   = {2026},
+  doi    = {10.5281/zenodo.19271983},
   url    = {https://github.com/Scottcjn/rpi-inference}
 }
 ```
