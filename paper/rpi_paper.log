@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.2.10)  27 MAR 2026 22:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.2.10)  27 MAR 2026 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,9 +522,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 79--80
- []\T1/cmr/bx/n/10 Cache-aware com-pu-ta-tion.[] \T1/cmr/m/n/10 Cache-oblivious
- al-go-
+Underfull \hbox (badness 1675) in paragraph at lines 77--78
+ []\T1/cmr/bx/n/10 LUT-based in-fer-ence.[] \T1/cmr/m/n/10 LUT-NN [[]] pre-com-
+putes
  []
 
 
@@ -534,14 +534,17 @@ c/dvips/cm-super/cm-super-t1.enc}
 
 
 ]
-Underfull \hbox (badness 1325) in paragraph at lines 81--82
-\T1/cmr/m/n/10 con-cur-rent work on RAM Cof-fers [[]] maps cog-ni-
+Underfull \hbox (badness 3769) in paragraph at lines 81--82
+ []\T1/cmr/bx/n/10 Cache-aware com-pu-ta-tion.[] \T1/cmr/m/n/10 Cache-oblivious
+ al-go-
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 93--94
+Underfull \hbox (badness 2538) in paragraph at lines 95--96
 []\T1/cmr/bx/n/10 Permutation blocks\T1/cmr/m/n/10 : 64-lane ternary micro-
  []
+
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -549,40 +552,38 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 143.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
+put line 145.
 
 
 [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 1303) in paragraph at lines 216--217
+Underfull \hbox (badness 1303) in paragraph at lines 218--219
 \T1/cmr/m/n/10 di-dates us-ing hard-ware time-base reg-is-ters (\T1/cmtt/m/n/10
  mftb \T1/cmr/m/n/10 on
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-
-
-Underfull \hbox (badness 2302) in paragraph at lines 252--253
+Underfull \hbox (badness 2302) in paragraph at lines 254--255
 []\T1/cmr/bx/n/10 Node 2 \T1/cmr/m/n/10 (Tem-po-ral Lobe): Mem-ory, con-text,
  []
 
 
 
 [3]
-Overfull \hbox (5.59955pt too wide) in paragraph at lines 323--340
+Overfull \hbox (5.59955pt too wide) in paragraph at lines 325--342
  [][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -591,19 +592,19 @@ Overfull \hbox (5.59955pt too wide) in paragraph at lines 323--340
 [4]
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 490--493
+Underfull \hbox (badness 1194) in paragraph at lines 492--495
 \T1/cmr/m/n/10 Open and ef-fi-cient foun-da-tion lan-guage mod-els.
  []
 
 
 
 [5]
-Underfull \hbox (badness 3826) in paragraph at lines 540--543
+Underfull \hbox (badness 3826) in paragraph at lines 542--545
 []\T1/cmr/m/n/10 Z. He, Z. Zhong, T. Cai, J. Lee, D. He.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--543
+Underfull \hbox (badness 10000) in paragraph at lines 542--545
 \T1/cmr/m/n/10 REST: Retrieval-based spec-u-la-tive de-cod-ing.
  []
 
@@ -611,9 +612,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--543
 
 
 
-[6
-
-] (./rpi_paper.aux)
+[6] (./rpi_paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -622,10 +621,10 @@ Package rerunfilecheck Info: File `rpi_paper.out' has not changed.
 (rerunfilecheck)             Checksum: 3F3672A29672A54ED390120D5FF714CD;3820.
  ) 
 Here is how much of TeX's memory you used:
- 14713 strings out of 473197
- 223585 string characters out of 5718605
- 876607 words of memory out of 5000000
- 37639 multiletter control sequences out of 15000+600000
+ 14724 strings out of 473197
+ 223757 string characters out of 5718605
+ 879470 words of memory out of 5000000
+ 37644 multiletter control sequences out of 15000+600000
  580925 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1371b,1239s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -653,10 +652,10 @@ blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti09
 exmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt120
 0.pfb>
-Output written on rpi_paper.pdf (6 pages, 515104 bytes).
+Output written on rpi_paper.pdf (6 pages, 519217 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 370 compressed objects within 4 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 137 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
